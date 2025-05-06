@@ -26,30 +26,86 @@
         .body-font {
             font-family: 'Inter', sans-serif;
         }
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            object-cover;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Discreet Contact Icons */
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 0;
+            text-align: center;
+            z-index: 50;
+        }
+        .contact-icon {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #1E3A8A; /* Primary blue from logo theme */
+            font-size: 1.25rem;
+        }
+        .contact-icon:hover {
+            color: #3B82F6; /* Lighter blue on hover */
+        }
     </style>
 </head>
-<body class="bg-gray-100 body-font">
-    <header class="bg-white shadow-md">
+<body class="bg-blue-50 body-font"> <header class="bg-white shadow-md">
         <div class="container">
             <div class="flex justify-between items-center py-4">
                 <a href="#" class="flex items-center">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/13561087241426714434" alt="Herbst Beverages Logo" class="logo mr-4">
+                    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" alt="Herbst Beverages Logo" class="logo mr-4">
                     <span class="text-xl font-semibold text-blue-600 heading-font">Herbst Beverages</span>
                 </a>
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
-                        <li><a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a></li>
-                        <li><a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">About Us</a></li>
-                        <li><a href="#products" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Our Products</a></li>
-                        <li><a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact Us</a></li>
-                        <li><a href="#distributor" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Distributor</a></li>
+                        <li><a href="#home" class="nav-link text-blue-700 hover:text-blue-900 transition duration-300">Home</a></li>
+                        <li><a href="#about" class="nav-link text-blue-700 hover:text-blue-900 transition duration-300">About Us</a></li>
+                        <li><a href="#products" class="nav-link text-blue-700 hover:text-blue-900 transition duration-300">Our Products</a></li>
+                        <li><a href="#contact" class="nav-link text-blue-700 hover:text-blue-900 transition duration-300">Contact Us</a></li>
+                        <li><a href="#distributor" class="nav-link text-blue-700 hover:text-blue-900 transition duration-300">Distributor</a></li>
                     </ul>
                 </nav>
-                <button id="hamburger-btn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle Navigation">
+                <button id="hamburger-btn" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle Navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-
                 </button>
             </div>
         </div>
@@ -59,29 +115,29 @@
         <div class="bg-white w-80 h-full absolute right-0 p-6">
             <div class="flex justify-end mb-4">
                 <button id="close-menu-btn" class="text-gray-700 focus:outline-none" aria-label="Close Menu">
-                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <nav class="block">
                 <ul class="space-y-4">
-                     <li><a href="#home" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Home</a></li>
-                    <li><a href="#about" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">About Us</a></li>
-                    <li><a href="#products" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Our Products</a></li>
-                    <li><a href="#contact" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Contact Us</a></li>
-                     <li><a href="#distributor" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Distributor</a></li>
+                    <li><a href="#home" class="block nav-link text-blue-700 hover:text-blue-900 transition duration-300 text-lg">Home</a></li>
+                    <li><a href="#about" class="block nav-link text-blue-700 hover:text-blue-900 transition duration-300 text-lg">About Us</a></li>
+                    <li><a href="#products" class="block nav-link text-blue-700 hover:text-blue-900 transition duration-300 text-lg">Our Products</a></li>
+                    <li><a href="#contact" class="block nav-link text-blue-700 hover:text-blue-900 transition duration-300 text-lg">Contact Us</a></li>
+                    <li><a href="#distributor" class="block nav-link text-blue-700 hover:text-blue-900 transition duration-300 text-lg">Distributor</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
     <main>
-        <section id="home" class="bg-gray-100 py-16 md:py-24">
+        <section id="home" class="bg-blue-50 py-16 md:py-24">
             <div class="container">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                     <div class="md:w-1/2">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/11604755287416750108" alt="Refreshing Drinks" class="rounded-lg shadow-lg">
+                        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Catalogue%20.jpeg" alt="Refreshing Drinks" class="rounded-lg shadow-lg">
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
                         <h1 class="text-4xl font-bold text-blue-700 mb-4 heading-font">Refreshing Taste, Responsibly Bottled</h1>
@@ -112,28 +168,38 @@
             </div>
         </section>
 
-        <section id="values" class="bg-gray-100 py-16 md:py-24">
+        <section id="values" class="bg-blue-50 py-16 md:py-24">
             <div class="container">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Our Values</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="flex items-center gap-4">
-                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Glass Bottles" class="w-8 h-8 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span class="text-lg font-medium text-gray-700 body-font">Glass Bottles, No Plastic</span>
                     </div>
                     <div class="flex items-center gap-4">
-                         <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="FSSAI Certified" class="w-8 h-8 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span class="text-lg font-medium text-gray-700 body-font">FSSAI Certified Quality</span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Locally Produced" class="w-8 h-8 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span class="text-lg font-medium text-gray-700 body-font">Locally Produced</span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Eco-Conscious" class="w-8 h-8 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span class="text-lg font-medium text-gray-700 body-font">Eco-Conscious Practices</span>
                     </div>
-                     <div class="flex items-center gap-4">
-                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Women Empowerment" class="w-8 h-8 text-green-500">
+                    <div class="flex items-center gap-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         <span class="text-lg font-medium text-gray-700 body-font">Empowering Women</span>
                     </div>
                 </div>
@@ -143,194 +209,9 @@
         <section id="products" class="bg-white py-16 md:py-24">
             <div class="container">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-12 text-center heading-font">Our Products</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/7163185355826394817" alt="Flavoured Sodas" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Flavoured Sodas</h3>
-                            <p class="text-lg text-gray-600 mb-4 body-font">Experience a burst of unique and refreshing flavours with our signature Goli Sodas.</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-                                <div>
-                                    <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Flavours:</h4>
-                                    <ul class="list-disc list-inside text-gray-600 body-font">
-                                        <li>Orange</li>
-                                        <li>Lemon</li>
-                                        <li>Nimbu Pani</li>
-                                        <li>Jeera</li>
-                                        <li>Jaljeera</li>
-                                        <li>Strawberry</li>
-                                        <li>Sugandhi</li>
-                                    </ul>
-                                </div>
-                                 <div>
-                                     <img src="http://googleusercontent.com/image_collection/image_retrieval/7163185355826394817" alt="Flavoured Sodas" class="w-full h-48 object-contain">
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/5376709097956867107" alt="Sabja Seed Drinks" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Sabja Seed Drinks</h3>
-                            <p class="text-lg text-gray-600 mb-4 body-font">Naturally hydrating and packed with health benefits, our Sabja Seed Drinks are a delicious way to stay refreshed.</p>
-                             <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-                                <div>
-                                    <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Flavours:</h4>
-                                    <ul class="list-disc list-inside text-gray-600 body-font">
-                                        <li>Strawberry</li>
-                                        <li>Lemon</li>
-                                        <li>Blue Berry</li>
-                                        <li>Guava</li>
-                                        <li>Orange</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                     <img src="http://googleusercontent.com/image_collection/image_retrieval/5376709097956867107" alt="Sabja Seed Drinks" class="w-full h-48 object-contain">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/2199541689273264602" alt="Bottled Water" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Bottled Water</h3>
-                            <p class="text-lg text-gray-600 mb-4 body-font">Pure and safe Nallamalla Hill Alkaline Water, processed with advanced filtration for ultimate hydration.</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-                                <div>
-                                     <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Treatment:</h4>
-                                    <ul class="list-disc list-inside text-gray-600 body-font">
-                                        <li>Sand Filtration</li>
-                                        <li>Activated Carbon Filtration</li>
-                                        <li>UV Treatment</li>
-                                        <li>Reverse Osmosis</li>
-                                        <li>Ozonation</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <img src="http://googleusercontent.com/image_collection/image_retrieval/2199541689273264602" alt="Bottled Water" class="w-full h-48 object-contain">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="contact" class="bg-gray-100 py-16 md:py-24">
-            <div class="container">
-                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Contact Us</h2>
-                <div class="flex flex-col md:flex-row justify-center gap-8">
-                    <div class="md:w-1/2">
-                        <h4 class="text-xl font-semibold text-gray-700 mb-4 heading-font">Get in Touch</h4>
-                        <p class="text-lg text-gray-600 mb-2 body-font">Phone: 9493905678</p>
-                        <p class="text-lg text-gray-600 mb-2 body-font">Email: tandrapatitraders@gmail.com</p>
-                    </div>
-                    <div class="md:w-1/2">
-                        <h4 class="text-xl font-semibold text-gray-700 mb-4 heading-font">Contact Form</h4>
-                        <form class="bg-white rounded-lg shadow-md p-6">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2 body-font">Name</label>
-                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2 body-font">Email</label>
-                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2 body-font">Message</label>
-                                <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 focus:outline-none focus:shadow-outline">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="distributor" class="bg-white py-16 md:py-24">
-            <div class="container">
-                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Become a Distributor</h2>
-                <p class="text-lg text-gray-600 mb-6 text-center body-font">
-                    Are you passionate about quality beverages and ready to expand your business? Herbst is looking for motivated individuals and businesses to join our growing network of distributors.
-                </p>
-                <p class="text-lg text-gray-600 mb-6 text-center body-font">
-                    By partnering with us, you can offer premium products like Goli Soda, Sabja Seed Drinks, Flavoured Milk, and Nallamalla Hill Alkaline Water to your customers.
-                </p>
-                <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center heading-font">Why Partner with Herbst?</h3>
-                <ul class="list-disc list-inside text-lg text-gray-600 mb-6">
-                    <li>High-quality, unique products</li>
-                    <li>Growing brand with a focus on sustainability and health</li>
-                    <li>Competitive margins and support</li>
-                    <li>Flexible distribution opportunities</li>
-                </ul>
-                <div class="text-center">
-                    <p class="text-lg text-gray-600 mb-2 body-font">Interested? Contact us at:</p>
-                    <p class="text-lg text-blue-600 font-semibold mb-2 body-font">Phone: 9493905678</p>
-                    <p class="text-lg text-blue-600 font-semibold body-font">Email: tandrapatitraders@gmail.com</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-200 py-4">
-        <div class="container text-center text-gray-600 body-font">
-            © [Year] Herbst Beverages. All rights reserved. | "Herbst – Taste That Cares"
-        </div>
-    </footer>
-
-    <script>
-        const hamburgerBtn = document.getElementById("hamburger-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const closeMenuBtn = document.getElementById("close-menu-btn");
-        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
-
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle("hidden");
-        }
-
-        hamburgerBtn.addEventListener("click", toggleMobileMenu);
-        closeMenuBtn.addEventListener("click", toggleMobileMenu);
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener("click", toggleMobileMenu);
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
-                toggleMobileMenu();
-            }
-        });
-
-        function updateActiveNavLink() {
-            let currentSectionId = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
-                    currentSectionId = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentSectionId) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', updateActiveNavLink);
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Flavoured Sodas</h3>
+                    <div class="slideshow-container">
+                        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20soda.jpeg" alt="Blueberry Goli Soda"></div>
+                        <div class="slide"><img src="https://
