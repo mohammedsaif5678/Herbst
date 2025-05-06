@@ -4,183 +4,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbst Beverages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Basic Modern Styling (Feel free to expand with a separate CSS file) */
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            color: #333;
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 20px;
+        .logo {
+            max-height: 80px; /* Adjust as needed */
         }
-        .logo-main {
-            max-height: 60px;
+        .nav-link {
+            font-family: 'Inter', sans-serif;
         }
-        .logo-secondary {
-            max-height: 40px;
+        .heading-font {
+            font-family: 'Inter', sans-serif;
         }
-        .product-category {
-            margin-bottom: 30px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .product-item {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .contact-icons {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .contact-icons a {
-            display: inline-block;
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007bff; /* Example link color */
-        }
-        .whatsapp-icon {
-            /* You might want to use an actual WhatsApp icon image here */
-            font-size: 2em; /* Example size */
-            color: green; /* Example WhatsApp color */
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #777;
-        }
-        .highlight-workforce {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+        .body-font {
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <header>
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" alt="Herbst Beverages Main Logo" class="logo-main">
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%202.jpeg" alt="Herbst Beverages Alternative Logo" class="logo-secondary">
+<body class="bg-gray-100 body-font">
+    <header class="bg-white shadow-md">
+        <div class="container">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/13561087241426714434" alt="Herbst Beverages Logo" class="logo mr-4">
+                    <span class="text-xl font-semibold text-blue-600 heading-font">Herbst Beverages</span>
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a></li>
+                        <li><a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">About Us</a></li>
+                        <li><a href="#products" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Our Products</a></li>
+                        <li><a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact Us</a></li>
+                        <li><a href="#distributor" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Distributor</a></li>
+                    </ul>
+                </nav>
+                <button id="hamburger-btn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle Navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section class="product-category">
-        <h2>Flavoured Sodas</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20soda.jpeg" alt="Herbst Beverages Blueberry Goli Soda" class="product-image">
-                <p>Blueberry Goli Soda</p>
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-white w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-gray-700 focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Jeera%20soda.jpeg" alt="Herbst Beverages Jeera Goli Soda" class="product-image">
-                <p>Jeera Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Lemon%20sour.jpeg" alt="Herbst Beverages Lemon Sour Goli Soda" class="product-image">
-                <p>Lemon Sour Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Nimbu%20pani.jpeg" alt="Herbst Beverages Nimbu Pani Goli Soda" class="product-image">
-                <p>Nimbu Pani Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20soda.jpeg" alt="Herbst Beverages Orange Goli Soda" class="product-image">
-                <p>Orange Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20soda.jpeg" alt="Herbst Beverages Strawberry Goli Soda" class="product-image">
-                <p>Strawberry Goli Soda</p>
-            </div>
-            </div>
-    </section>
+            <nav class="block">
+                <ul class="space-y-4">
+                     <li><a href="#home" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Home</a></li>
+                    <li><a href="#about" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">About Us</a></li>
+                    <li><a href="#products" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Our Products</a></li>
+                    <li><a href="#contact" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Contact Us</a></li>
+                     <li><a href="#distributor" class="block nav-link text-gray-700 hover:text-blue-600 transition duration-300 text-lg">Distributor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-    <section class="product-category">
-        <h2>Sabja Seed Drinks</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20sabja.jpeg" alt="Herbst Beverages Blueberry Sabja Seed Drink" class="product-image">
-                <p>Blueberry Sabja Drink</p>
+    <main>
+        <section id="home" class="bg-gray-100 py-16 md:py-24">
+            <div class="container">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="md:w-1/2">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/11604755287416750108" alt="Refreshing Drinks" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-4xl font-bold text-blue-700 mb-4 heading-font">Refreshing Taste, Responsibly Bottled</h1>
+                        <p class="text-xl text-gray-600 mb-6 body-font">Flavoured Sodas • Sabja Seed Drinks • Pure Water</p>
+                        <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 inline-block">Explore Our Products</a>
+                    </div>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Mango%20sabja.jpeg" alt="Herbst Beverages Mango Sabja Seed Drink" class="product-image">
-                <p>Mango Sabja Drink</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20sabja%202.jpeg" alt="Herbst Beverages Strawberry Sabja Seed Drink" class="product-image">
-                <p>Strawberry Sabja Drink (Version 2)</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20sabja.jpeg" alt="Herbst Beverages Strawberry Sabja Seed Drink" class="product-image">
-                <p>Strawberry Sabja Drink</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Team%20sabja.jpeg" alt="Selection of Herbst Beverages Sabja Seed Drinks Flavors" class="product-image">
-                <p>Sabja Drinks Assortment</p>
-            </div>
-            </div>
-    </section>
+        </section>
 
-    <section class="product-category">
-        <h2>Bottled Water</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/5%20litre%20.jpeg" alt="Herbst Beverages 5 Litre Bottled Water" class="product-image">
-                <p>5 Litre Bottled Water</p>
+        <section id="about" class="bg-white py-16 md:py-24">
+            <div class="container">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">About Us</h2>
+                <p class="text-lg text-gray-600 mb-6 body-font">
+                    At Herbst, we’re committed to delivering high-quality beverages made with care — from our refreshing sodas to our health-boosting sabja drinks. Headquartered in Srisailam, Andhra Pradesh, we’re proudly expanding to bring our taste to more communities.
+                </p>
+                <p class="text-lg text-gray-600 mb-6 body-font">
+                    We are a women-majority company, proudly owned and led by a woman who believes in fostering equality and building a strong, diverse team. From Srisailam, Andhra Pradesh, our vision is to bring our refreshing range of Goli Sodas, Sabja Seed Drinks, and pure Nallamalla Hill Alkaline Water to communities far and wide. Our unique approach is rooted in the belief that a company built on strong values, including the empowerment of women, can create products that truly resonate with care and quality.
+                </p>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Our People: Empowering Women in the Workplace</h3>
+                <p class="text-lg text-gray-600 mb-6 body-font">
+                    At Herbst, we proudly employ a majority of women in our workforce. We believe in empowering women, fostering equality, and building a strong, diverse team. Together, we work to create beverages that are as refreshing as the values we stand for.
+                </p>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Our Packaging: Quality in Every Drop</h3>
+                <p class="text-lg text-gray-600 body-font">
+                    While we take pride in using glass bottles for our consumer-sized drinks to ensure freshness and sustainability, we also offer 5-litre and 10-litre cans exclusively for bottled water. These larger containers, made with high-quality plastic, are designed to preserve the purity and freshness of our water for bulk customers and businesses.
+                </p>
             </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Water.jpeg" alt="Herbst Beverages Bottled Water" class="product-image">
-                <p>Standard Bottled Water</p>
-            </div>
-            </div>
-    </section>
+        </section>
 
-    <section class="product-category">
-        <h2>Flavoured Milk</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Badam%20milk.jpeg" alt="Herbst Beverages Badam Flavored Milk" class="product-image">
-                <p>Badam Flavoured Milk</p>
+        <section id="values" class="bg-gray-100 py-16 md:py-24">
+            <div class="container">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Our Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex items-center gap-4">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Glass Bottles" class="w-8 h-8 text-green-500">
+                        <span class="text-lg font-medium text-gray-700 body-font">Glass Bottles, No Plastic</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                         <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="FSSAI Certified" class="w-8 h-8 text-green-500">
+                        <span class="text-lg font-medium text-gray-700 body-font">FSSAI Certified Quality</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Locally Produced" class="w-8 h-8 text-green-500">
+                        <span class="text-lg font-medium text-gray-700 body-font">Locally Produced</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Eco-Conscious" class="w-8 h-8 text-green-500">
+                        <span class="text-lg font-medium text-gray-700 body-font">Eco-Conscious Practices</span>
+                    </div>
+                     <div class="flex items-center gap-4">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/check-circle.svg" alt="Women Empowerment" class="w-8 h-8 text-green-500">
+                        <span class="text-lg font-medium text-gray-700 body-font">Empowering Women</span>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="products" class="bg-white py-16 md:py-24">
+            <div class="container">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-12 text-center heading-font">Our Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/7163185355826394817" alt="Flavoured Sodas" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Flavoured Sodas</h3>
+                            <p class="text-lg text-gray-600 mb-4 body-font">Experience a burst of unique and refreshing flavours with our signature Goli Sodas.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                                <div>
+                                    <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Flavours:</h4>
+                                    <ul class="list-disc list-inside text-gray-600 body-font">
+                                        <li>Orange</li>
+                                        <li>Lemon</li>
+                                        <li>Nimbu Pani</li>
+                                        <li>Jeera</li>
+                                        <li>Jaljeera</li>
+                                        <li>Strawberry</li>
+                                        <li>Sugandhi</li>
+                                    </ul>
+                                </div>
+                                 <div>
+                                     <img src="http://googleusercontent.com/image_collection/image_retrieval/7163185355826394817" alt="Flavoured Sodas" class="w-full h-48 object-contain">
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/5376709097956867107" alt="Sabja Seed Drinks" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Sabja Seed Drinks</h3>
+                            <p class="text-lg text-gray-600 mb-4 body-font">Naturally hydrating and packed with health benefits, our Sabja Seed Drinks are a delicious way to stay refreshed.</p>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                                <div>
+                                    <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Flavours:</h4>
+                                    <ul class="list-disc list-inside text-gray-600 body-font">
+                                        <li>Strawberry</li>
+                                        <li>Lemon</li>
+                                        <li>Blue Berry</li>
+                                        <li>Guava</li>
+                                        <li>Orange</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                     <img src="http://googleusercontent.com/image_collection/image_retrieval/5376709097956867107" alt="Sabja Seed Drinks" class="w-full h-48 object-contain">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card rounded-lg shadow-md overflow-hidden bg-gray-100">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/2199541689273264602" alt="Bottled Water" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-blue-700 mb-4 heading-font">Bottled Water</h3>
+                            <p class="text-lg text-gray-600 mb-4 body-font">Pure and safe Nallamalla Hill Alkaline Water, processed with advanced filtration for ultimate hydration.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                                <div>
+                                     <h4 class="text-md font-semibold text-gray-700 mb-2 body-font">Treatment:</h4>
+                                    <ul class="list-disc list-inside text-gray-600 body-font">
+                                        <li>Sand Filtration</li>
+                                        <li>Activated Carbon Filtration</li>
+                                        <li>UV Treatment</li>
+                                        <li>Reverse Osmosis</li>
+                                        <li>Ozonation</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="http://googleusercontent.com/image_collection/image_retrieval/2199541689273264602" alt="Bottled Water" class="w-full h-48 object-contain">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-    </section>
+        </section>
 
-    <section class="contact-icons">
-        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer">
-            <span class="whatsapp-icon">WhatsApp</span>
-        </a>
-        <a href="tel:YOUR_PHONE_NUMBER">
-            Call Us
-        </a>
-    </section>
+        <section id="contact" class="bg-gray-100 py-16 md:py-24">
+            <div class="container">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Contact Us</h2>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                    <div class="md:w-1/2">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4 heading-font">Get in Touch</h4>
+                        <p class="text-lg text-gray-600 mb-2 body-font">Phone: 9493905678</p>
+                        <p class="text-lg text-gray-600 mb-2 body-font">Email: tandrapatitraders@gmail.com</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h4 class="text-xl font-semibold text-gray-700 mb-4 heading-font">Contact Form</h4>
+                        <form class="bg-white rounded-lg shadow-md p-6">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2 body-font">Name</label>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2 body-font">Email</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2 body-font">Message</label>
+                                <textarea id="message" name="message" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 focus:outline-none focus:shadow-outline">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="highlight-workforce">
-        <h2>Our Dedicated Team</h2>
-        <p>At Herbst Beverages, we are proud to have a dedicated and talented workforce, with a majority of our team comprised of skilled and hardworking women. Their contributions are invaluable to the quality and success of our products.</p>
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Side%20logo.jpeg" alt="Herbst Beverages Side Logo" style="max-width: 150px; height: auto; margin-top: 10px;">
-        <p>We believe in fostering an inclusive environment where everyone can thrive and contribute their best.</p>
-    </section>
+        <section id="distributor" class="bg-white py-16 md:py-24">
+            <div class="container">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-8 text-center heading-font">Become a Distributor</h2>
+                <p class="text-lg text-gray-600 mb-6 text-center body-font">
+                    Are you passionate about quality beverages and ready to expand your business? Herbst is looking for motivated individuals and businesses to join our growing network of distributors.
+                </p>
+                <p class="text-lg text-gray-600 mb-6 text-center body-font">
+                    By partnering with us, you can offer premium products like Goli Soda, Sabja Seed Drinks, Flavoured Milk, and Nallamalla Hill Alkaline Water to your customers.
+                </p>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4 text-center heading-font">Why Partner with Herbst?</h3>
+                <ul class="list-disc list-inside text-lg text-gray-600 mb-6">
+                    <li>High-quality, unique products</li>
+                    <li>Growing brand with a focus on sustainability and health</li>
+                    <li>Competitive margins and support</li>
+                    <li>Flexible distribution opportunities</li>
+                </ul>
+                <div class="text-center">
+                    <p class="text-lg text-gray-600 mb-2 body-font">Interested? Contact us at:</p>
+                    <p class="text-lg text-blue-600 font-semibold mb-2 body-font">Phone: 9493905678</p>
+                    <p class="text-lg text-blue-600 font-semibold body-font">Email: tandrapatitraders@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2025 Herbst Beverages. All rights reserved.</p>
+    <footer class="bg-gray-200 py-4">
+        <div class="container text-center text-gray-600 body-font">
+            © [Year] Herbst Beverages. All rights reserved. | "Herbst – Taste That Cares"
+        </div>
     </footer>
 
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
