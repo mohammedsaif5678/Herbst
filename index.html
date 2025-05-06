@@ -5,20 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Herbst Beverages</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header, section, footer { padding: 40px 20px; text-align: center; }
-    header { background: url('your-image.jpg') center/cover no-repeat; color: white; }
-    h1 { font-size: 2.5em; }
-    .tagline { font-size: 1.2em; margin-top: 10px; }
-    .btn { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; }
-    .values, .products, .reviews, .about-extra { background: #f9f9f9; }
-    ul { list-style: none; padding: 0; }
-    ul li::before { content: '✅ '; }
-    .form-group { margin: 15px 0; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto; }
-    label, input, textarea { display: block; width: 100%; }
-    input, textarea { padding: 10px; margin-top: 5px; }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-    footer { background: #222; color: #fff; }
+    :root {
+      --green: #28a745;
+      --orange: #ff6f00;
+      --yellow: #ffc107;
+      --blue: #00bcd4;
+      --pink: #ec407a;
+      --dark: #222;
+      --light: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      background-color: white;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('images/hero-drinks.jpg') center/cover no-repeat;
+      color: white; height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 1.4em;
+      margin-top: 10px;
+      color: #ffe082;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: var(--orange);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--yellow);
+      color: black;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background-color: var(--light);
+    }
+
+    h2 {
+      color: var(--green);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      font-weight: 500;
+    }
+
+    ul li::before {
+      content: '✅ ';
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    img.product-photo {
+      max-width: 280px;
+      margin: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    .form-group {
+      margin: 15px 0;
+      text-align: left;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      width: 100%;
+      margin-top: 5px;
+      border: 2px solid var(--blue);
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: var(--orange);
+    }
+
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    footer p:last-child {
+      color: #fff;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -46,8 +172,9 @@
 
 <section id="products">
   <h2>Our Products</h2>
+
   <h3>Flavoured Sodas</h3>
-  <p>Experience the unique taste of Herbst Goli Soda in these flavors:</p>
+  <img src="images/goli-soda-flavours.jpg" alt="Goli Soda Bottles" class="product-photo"/>
   <ul>
     <li>Orange – A citrusy burst of refreshment</li>
     <li>Lemon – Classic tangy lemon goodness</li>
@@ -59,29 +186,34 @@
   </ul>
 
   <h3>Sabja Seed Drinks</h3>
+  <img src="images/sabja-drinks.jpg" alt="Sabja Seed Drinks" class="product-photo"/>
   <p>Infused with health-boosting basil seeds, these drinks are great for digestion, hydration, and cooling down naturally.</p>
 
   <h3>Bottled Water</h3>
+  <img src="images/alkaline-water.jpg" alt="Nallamalla Hill Alkaline Water" class="product-photo"/>
   <p>Pure, clean, and safe — including Nallamalla Hill Alkaline Water with multi-step purification (UV, RO, Ozonation, etc.).</p>
 </section>
 
 <section class="about-extra">
   <h2>Our People: Empowering Women in the Workplace</h2>
+  <img src="images/women-team.jpg" alt="Herbst Women Team" class="product-photo"/>
   <p>We proudly employ a majority of women in our workforce. We believe in empowerment, equality, and creating a diverse team that reflects our values.</p>
 
   <h2>Our Packaging: Quality in Every Drop</h2>
+  <img src="images/glass-vs-plastic.jpg" alt="Glass and Plastic Packaging" class="product-photo"/>
   <p>We use glass bottles for our regular drinks to ensure freshness and sustainability. For bulk water needs, we offer 5L and 10L cans made with high-quality plastic, preserving water purity.</p>
 </section>
 
 <section id="distributors">
-  <h2>Become a Distributor</h2>
+  <h2 style="color: var(--pink);">Become a Distributor</h2>
+  <img src="images/distributor-banner.jpg" alt="Distributor Invitation" class="product-photo"/>
   <p>Partner with us to distribute Goli Soda, Sabja Seed Drinks, Flavoured Milk, and Alkaline Water. Enjoy high margins, flexible opportunities, and support.</p>
   <p><strong>📞 Phone:</strong> 9493905678<br>
      <strong>📧 Email:</strong> tandrapatitraders@gmail.com</p>
 </section>
 
 <section class="reviews">
-  <h2>Customer Reviews</h2>
+  <h2 style="color: var(--blue);">Customer Reviews</h2>
   <div>
     <p><strong>Priya R.</strong>: "Loved the lemon Goli Soda! So refreshing and nostalgic."</p>
     <p><strong>Arun K.</strong>: "The sabja drinks are my go-to during summer. Tasty and healthy!"</p>
@@ -102,7 +234,7 @@
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
+  <h2 style="color: var(--orange);">Contact Us</h2>
   <p><strong>Phone:</strong> 9493905678</p>
   <p><strong>Email:</strong> tandrapatitraders@gmail.com</p>
 
