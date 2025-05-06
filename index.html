@@ -1,13 +1,141 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbst Beverages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .cta-btn {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .products, .distributor-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product, .distributor-info-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Herbst Beverages</h1>
-    <p>This is a placeholder page while we finalize the full website for www.herbstbeverages.in</p>
+    <header>
+        <h1>Herbst Beverages</h1>
+    </header>
+
+    <div class="hero">
+        <h2>Refreshing Taste, Responsibly Bottled</h2>
+        <p>Flavoured Sodas • Sabja Seed Drinks • Pure Water</p>
+        <a href="#products" class="cta-btn">Explore Our Products</a>
+    </div>
+
+    <section id="about-us">
+        <h2>About Herbst</h2>
+        <p>At Herbst, we’re committed to delivering high-quality beverages made with care — from our refreshing sodas to our health-boosting sabja drinks. Headquartered in Srisailam, Andhra Pradesh, we’re proudly expanding to bring our taste to more communities.</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+
+        <div class="products">
+            <div class="product">
+                <h3>Goli Soda</h3>
+                <p>Experience the unique taste of Herbst Goli Soda with refreshing flavours like Orange, Lemon, Nimbu Pani, Jeera, Jaljeera, Strawberry, and Sugandhi.</p>
+            </div>
+
+            <div class="product">
+                <h3>Nallamalla Hill Alkaline Water</h3>
+                <p>Pure, refreshing, and treated through advanced filtration to ensure quality and safety. Drink with confidence and enjoy nature’s best.</p>
+            </div>
+
+            <div class="product">
+                <h3>Flavoured Milk (Coming Soon)</h3>
+                <p>Get ready for our rich, creamy, and indulgent flavoured milk in Badam, Pista, Strawberry, and Chocolate.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="distributor">
+        <h2>Become a Distributor</h2>
+        <div class="distributor-info">
+            <div class="distributor-info-box">
+                <h3>Why Partner with Herbst?</h3>
+                <p>High-quality, unique products | Growing brand with a focus on sustainability and health | Competitive margins and support</p>
+            </div>
+            <div class="distributor-info-box">
+                <h3>Contact Us</h3>
+                <p>Interested in joining our distributor network? Reach us at:</p>
+                <p>📞 Phone: 9493905678</p>
+                <p>📧 Email: tandrapatitraders@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-info">
+        <h2>Contact Us</h2>
+        <p>For inquiries or more information, feel free to reach out to us anytime!</p>
+        <p>📞 Phone: 9493905678 | 📧 Email: tandrapatitraders@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Herbst Beverages | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
