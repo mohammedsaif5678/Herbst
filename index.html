@@ -1,186 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbst Beverages</title>
-    <style>
-        /* Basic Modern Styling (Feel free to expand with a separate CSS file) */
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 20px;
-        }
-        .logo-main {
-            max-height: 60px;
-        }
-        .logo-secondary {
-            max-height: 40px;
-        }
-        .product-category {
-            margin-bottom: 30px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .product-item {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .contact-icons {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .contact-icons a {
-            display: inline-block;
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007bff; /* Example link color */
-        }
-        .whatsapp-icon {
-            /* You might want to use an actual WhatsApp icon image here */
-            font-size: 2em; /* Example size */
-            color: green; /* Example WhatsApp color */
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #777;
-        }
-        .highlight-workforce {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herbst Beverages</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff9f0;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background: #fffbf5;
+      border-bottom: 2px solid #ffc107;
+    }
+
+    .logo-main {
+      max-height: 60px;
+    }
+
+    .logo-secondary {
+      max-height: 40px;
+    }
+
+    h2 {
+      color: #d32f2f;
+      padding: 15px;
+    }
+
+    .category-container {
+      padding: 20px;
+      margin: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .nav-button {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .slideshow-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .highlight-workforce {
+      background-color: #fdf2f8;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 40px 20px;
+      text-align: center;
+    }
+
+    .contact-us {
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px 20px;
+      text-align: center;
+    }
+
+    .contact-us a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #0288d1;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" alt="Herbst Beverages Main Logo" class="logo-main">
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%202.jpeg" alt="Herbst Beverages Alternative Logo" class="logo-secondary">
-    </header>
 
-    <section class="product-category">
-        <h2>Flavoured Sodas</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20soda.jpeg" alt="Herbst Beverages Blueberry Goli Soda" class="product-image">
-                <p>Blueberry Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Jeera%20soda.jpeg" alt="Herbst Beverages Jeera Goli Soda" class="product-image">
-                <p>Jeera Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Lemon%20sour.jpeg" alt="Herbst Beverages Lemon Sour Goli Soda" class="product-image">
-                <p>Lemon Sour Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Nimbu%20pani.jpeg" alt="Herbst Beverages Nimbu Pani Goli Soda" class="product-image">
-                <p>Nimbu Pani Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20soda.jpeg" alt="Herbst Beverages Orange Goli Soda" class="product-image">
-                <p>Orange Goli Soda</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20soda.jpeg" alt="Herbst Beverages Strawberry Goli Soda" class="product-image">
-                <p>Strawberry Goli Soda</p>
-            </div>
-            </div>
-    </section>
+  <header>
+    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" class="logo-main" />
+    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%202.jpeg" class="logo-secondary" />
+  </header>
 
-    <section class="product-category">
-        <h2>Sabja Seed Drinks</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20sabja.jpeg" alt="Herbst Beverages Blueberry Sabja Seed Drink" class="product-image">
-                <p>Blueberry Sabja Drink</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Mango%20sabja.jpeg" alt="Herbst Beverages Mango Sabja Seed Drink" class="product-image">
-                <p>Mango Sabja Drink</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20sabja%202.jpeg" alt="Herbst Beverages Strawberry Sabja Seed Drink" class="product-image">
-                <p>Strawberry Sabja Drink (Version 2)</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20sabja.jpeg" alt="Herbst Beverages Strawberry Sabja Seed Drink" class="product-image">
-                <p>Strawberry Sabja Drink</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Team%20sabja.jpeg" alt="Selection of Herbst Beverages Sabja Seed Drinks Flavors" class="product-image">
-                <p>Sabja Drinks Assortment</p>
-            </div>
-            </div>
-    </section>
+  <!-- Goli Soda -->
+  <section class="category-container">
+    <h2>Goli Soda</h2>
+    <div class="slideshow-container" data-category="goli">
+      <div class="slideshow-wrapper">
+        <div class="slide active"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20soda.jpeg" /></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Jeera%20soda.jpeg" /></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Lemon%20sour.jpeg" /></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Nimbu%20pani.jpeg" /></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20soda.jpeg" /></div>
+        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20soda.jpeg" /></div>
+      </div>
+      <button class="nav-button prev" onclick="changeSlide('goli', -1)">&#10094;</button>
+      <button class="nav-button next" onclick="changeSlide('goli', 1)">&#10095;</button>
+    </div>
+  </section>
 
-    <section class="product-category">
-        <h2>Bottled Water</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/5%20litre%20.jpeg" alt="Herbst Beverages 5 Litre Bottled Water" class="product-image">
-                <p>5 Litre Bottled Water</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Water.jpeg" alt="Herbst Beverages Bottled Water" class="product-image">
-                <p>Standard Bottled Water</p>
-            </div>
-            </div>
-    </section>
+  <!-- Contact Us -->
+  <section class="contact-us" id="contact">
+    <h2>Contact Us</h2>
+    <a href="https://wa.me/9493905678" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="tel:9493905678">Call Us</a>
+  </section>
 
-    <section class="product-category">
-        <h2>Flavoured Milk</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Badam%20milk.jpeg" alt="Herbst Beverages Badam Flavored Milk" class="product-image">
-                <p>Badam Flavoured Milk</p>
-            </div>
-            </div>
-    </section>
+  <!-- Workforce Highlight -->
+  <section class="highlight-workforce">
+    <h2>Our Dedicated Team</h2>
+    <p>At Herbst Beverages, we are proud to have a dedicated and talented workforce, with a majority of our team comprised of skilled and hardworking women.</p>
+    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Side%20logo.jpeg" style="max-width: 150px; height: auto; margin-top: 10px;" />
+    <p>We believe in fostering an inclusive environment where everyone can thrive and contribute their best.</p>
+  </section>
 
-    <section class="contact-icons">
-        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer">
-            <span class="whatsapp-icon">WhatsApp</span>
-        </a>
-        <a href="tel:YOUR_PHONE_NUMBER">
-            Call Us
-        </a>
-    </section>
+  <footer>
+    <p>&copy; 2025 Herbst Beverages. All rights reserved.</p>
+  </footer>
 
-    <section class="highlight-workforce">
-        <h2>Our Dedicated Team</h2>
-        <p>At Herbst Beverages, we are proud to have a dedicated and talented workforce, with a majority of our team comprised of skilled and hardworking women. Their contributions are invaluable to the quality and success of our products.</p>
-        <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Side%20logo.jpeg" alt="Herbst Beverages Side Logo" style="max-width: 150px; height: auto; margin-top: 10px;">
-        <p>We believe in fostering an inclusive environment where everyone can thrive and contribute their best.</p>
-    </section>
+  <script>
+    const slideData = {
+      goli: 0,
+    };
 
-    <footer>
-        <p>&copy; 2025 Herbst Beverages. All rights reserved.</p>
-    </footer>
+    function showSlide(category, index) {
+      const container = document.querySelector(`.slideshow-container[data-category="${category}"]`);
+      const slides = container.querySelectorAll(".slide");
+      slideData[category] = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === slideData[category]);
+      });
+    }
+
+    function changeSlide(category, step) {
+      showSlide(category, slideData[category] + step);
+    }
+
+    setInterval(() => {
+      changeSlide("goli", 1);
+    }, 3000);
+  </script>
 
 </body>
 </html>
