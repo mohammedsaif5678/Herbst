@@ -1,162 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Herbst Goli Soda - Taste of Real Soda</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
-      color: #333;
-    }
-
-    header {
-      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/Nallamala_Hills.jpg') center/cover no-repeat;
-      height: 60vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      background: rgba(0,0,0,0.5);
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-    }
-
-    header img {
-      height: 180px;
-      z-index: 2;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 3em;
-      margin: 20px 0 10px;
-      color: #0077cc;
-    }
-
-    .tagline {
-      text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #ff4081;
-    }
-
-    .intro {
-      background: #fffde7;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 1.3em;
-      border-top: 8px dashed #fbc02d;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 30px;
-      background: linear-gradient(to bottom right, #b2dfdb, #ffffff);
-    }
-
-    .gallery img {
-      height: 250px;
-      width: 180px;
-      object-fit: cover;
-      border: 5px solid #00bcd4;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.1);
-    }
-
-    .section {
-      text-align: center;
-      padding: 30px;
-      background: #fff9c4;
-      font-size: 1.2em;
-    }
-
-    .river {
-      background: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Krishna_River.jpg') center/cover no-repeat;
-      height: 40vh;
-      position: relative;
-    }
-
-    .river::before {
-      content: '';
-      background-color: rgba(255,255,255,0.4);
-      position: absolute;
-      inset: 0;
-    }
-
-    footer {
-      background: #00796b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .btn {
-      background: #ff5722;
-      color: white;
-      border: none;
-      padding: 15px 25px;
-      font-size: 1em;
-      margin-top: 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #e64a19;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herbst Beverages</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <img src="https://herbst-brand-assets.s3.amazonaws.com/herbst-goli-soda-logo.jpg" alt="Herbst Goli Soda Logo">
+  <!-- Header -->
+  <header class="site-header">
+    <img src="images/logo.png" alt="Herbst Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#distributors">Distributors</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <h1>Welcome to Herbst Goli Soda</h1>
-  <div class="tagline">The Taste of Real Soda from the Heart of Srisailam</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Drinks in Glass Bottles" class="hero-bg" />
+    <div class="hero-content">
+      <h1>Refreshing Taste, Responsibly Bottled</h1>
+      <p>Flavoured Sodas • Sabja Seed Drinks • Pure Water</p>
+      <a href="#products" class="cta">Explore Our Products</a>
+    </div>
+  </section>
 
-  <div class="intro">
-    Nestled in the lush Nallamala Hills, by the sacred Krishna River, our beverages bring nature's freshness and India's favorite soda tradition to life. Enjoy the fizz, feel the fun!
-  </div>
+  <!-- About Us -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Herbst, we’re committed to delivering high-quality beverages made with care — from our refreshing sodas to our health-boosting sabja drinks. Headquartered in Srisailam, Andhra Pradesh, we’re proudly expanding to bring our taste to more communities.</p>
+    <img src="images/about.jpg" alt="Herbst Team or Facility" />
+  </section>
 
-  <div class="gallery">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.32 PM (1) 2.jpeg" alt="Soda Bottle 1">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.34 PM 2.jpeg" alt="Soda Bottle 2">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.35 PM 2.jpeg" alt="Soda Bottle 3">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.37 PM 2.jpeg" alt="Soda Bottle 4">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.38 PM 2.jpeg" alt="Soda Bottle 5">
-    <img src="/mnt/data/WhatsApp Image 2025-05-04 at 1.12.39 PM (1) 2.jpeg" alt="Soda Bottle 6">
-  </div>
+  <!-- Our Values -->
+  <section id="values" class="section">
+    <h2>Our Values</h2>
+    <ul class="values-list">
+      <li>✅ Glass Bottles, No Plastic</li>
+      <li>✅ FSSAI Certified Quality</li>
+      <li>✅ Locally Produced</li>
+      <li>✅ Eco-Conscious Practices</li>
+    </ul>
+  </section>
 
-  <div class="section">
-    🌿 **Eco-Friendly Promise**<br>
-    We use glass bottles and local employment to keep things sustainable and empowering—especially for the women of Srisailam!
-  </div>
+  <!-- Our Products -->
+  <section id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="product-category">
+      <h3>Flavoured Sodas</h3>
+      <ul>
+        <li>Orange</li>
+        <li>Lemon</li>
+        <li>Nimbu Pani</li>
+        <li>Jeera</li>
+        <li>Jaljeera</li>
+        <li>Strawberry</li>
+        <li>Sugandhi</li>
+      </ul>
+      <img src="images/sodas.jpg" alt="Flavoured Sodas" />
+    </div>
 
-  <div class="river"></div>
+    <div class="product-category">
+      <h3>Sabja Seed Drinks</h3>
+      <p>Refreshing and beneficial for digestion — our Sabja drinks are both tasty and healthy.</p>
+      <img src="images/sabja.jpg" alt="Sabja Seed Drinks" />
+    </div>
 
-  <div class="section">
-    🍹 **Flavors You’ll Love**: Orange, Lemon, Nimbu Pani, Jeera, Jaljeera, Strawberry & Sugandhi<br>
-    🌊 Made with Alkaline Water from the sacred Nallamala region!
-    <br><button class="btn">Become a Distributor</button>
-  </div>
+    <div class="product-category">
+      <h3>Bottled Water</h3>
+      <p>Pure, clean, and safe — also available in 5L and 10L high-quality plastic cans for bulk buyers.</p>
+      <img src="images/water.jpg" alt="Bottled Water" />
+    </div>
+  </section>
 
-  <footer>
-    © 2025 Herbst Beverages | Srisailam | Refreshingly Local 🍃
+  <!-- Our People -->
+  <section class="section">
+    <h2>Empowering Women in the Workplace</h2>
+    <p>We proudly employ a majority of women at Herbst. We believe in empowerment, equality, and a strong, diverse team culture.</p>
+    <img src="images/women.jpg" alt="Herbst Women Workforce" />
+  </section>
+
+  <!-- Our Packaging -->
+  <section class="section">
+    <h2>Quality in Every Drop</h2>
+    <p>We use sustainable glass bottles for our consumer drinks and high-quality plastic for 5L and 10L water containers.</p>
+    <img src="images/packaging.jpg" alt="Packaging Showcase" />
+  </section>
+
+  <!-- Alkaline Water -->
+  <section class="section">
+    <h2>Nallamalla Hill Alkaline Water</h2>
+    <p>Sourced from the pristine Nallamalla Hills, our water goes through sand filtration, activated carbon, UV, RO, and ozonation to ensure purity and taste.</p>
+    <img src="images/alkaline.jpg" alt="Nallamalla Hill Alkaline Water" />
+  </section>
+
+  <!-- Become a Distributor -->
+  <section id="distributors" class="section">
+    <h2>Become a Distributor</h2>
+    <p>Join our growing network. Offer premium beverages with competitive margins, strong support, and a commitment to quality and sustainability.</p>
+    <p><strong>Phone:</strong> 9493905678<br/><strong>Email:</strong> tandrapatitraders@gmail.com</p>
+    <img src="images/distributor.jpg" alt="Distributors" />
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 9493905678<br/><strong>Email:</strong> tandrapatitraders@gmail.com</p>
+    <!-- Optional form -->
+    <!--
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <img src="images/logo.png" alt="Herbst Logo" class="footer-logo" />
+    <p>&copy; 2025 Herbst – Taste That Cares</p>
   </footer>
 
 </body>
