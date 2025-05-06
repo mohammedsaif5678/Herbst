@@ -64,24 +64,29 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        /* Discreet Contact Icons */
+        /* Direct Contact Bar */
         .contact-bar {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 0.5rem 0;
+            background-color: #f3f4f6; /* Light gray background */
+            padding: 0.75rem 0;
             text-align: center;
             z-index: 50;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
-        .contact-icon {
-            display: inline-block;
-            margin: 0 1rem;
-            color: #1E3A8A; /* Primary blue from logo theme */
-            font-size: 1.25rem;
+        .contact-link {
+            color: #1E3A8A; /* Primary blue */
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .contact-icon:hover {
+        .contact-link:hover {
             color: #3B82F6; /* Lighter blue on hover */
         }
     </style>
@@ -142,7 +147,7 @@
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
                         <h1 class="text-4xl font-bold text-blue-700 mb-4 heading-font">Refreshing Taste, Responsibly Bottled</h1>
-                        <p class="text-xl text-gray-600 mb-6 body-font">Flavoured Sodas • Sabja Seed Drinks • Pure Water</p>
+                        <p class="text-xl text-gray-600 mb-6 body-font">Goli Sodas • Flavoured Sodas • Sabja Seed Drinks • Packaged Water</p>
                         <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 inline-block">Explore Our Products</a>
                     </div>
                 </div>
@@ -204,14 +209,4 @@
                         <span class="text-lg font-medium text-gray-700 body-font">Empowering Women</span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#48BB78" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span class="text-lg font-medium text-gray-700 body-font">ISO Certified</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="bg-white py-16 md:py-24">
-            <div class="container">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
