@@ -1,185 +1,620 @@
-body {
-    font-family: 'Open Sans', sans-serif; /* Clean, readable font */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Very light gray background */
-    color: #333; /* Dark gray text */
-    -webkit-font-smoothing: antialiased; /* Improve font rendering */
-    -moz-osx-font-smoothing: grayscale;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbst Beverages - Refreshing Taste, Responsibly Bottled</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-header {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
-    position: sticky; /* Keep header at the top on scroll */
-    top: 0;
-    z-index: 100; /* Ensure it stays above other content */
-}
+    <style>
+        /* CSS starts here */
+        body {
+            font-family: 'Open Sans', sans-serif; /* Clean, readable font */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Very light gray background */
+            color: #333; /* Dark gray text */
+            -webkit-font-smoothing: antialiased; /* Improve font rendering */
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-.logo img {
-    max-width: 180px; /* Adjusted logo size */
-    height: auto;
-}
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            position: sticky; /* Keep header at the top on scroll */
+            top: 0;
+            z-index: 100; /* Ensure it stays above other content */
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-}
+        .logo img {
+            max-width: 180px; /* Adjusted logo size */
+            height: auto;
+        }
 
-nav ul li {
-    margin-bottom: 10px;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 600; /* Slightly bolder link text */
-    transition: color 0.3s ease;
-}
+        nav ul li {
+            margin-bottom: 10px;
+        }
 
-nav ul li a:hover {
-    color: #80deea; /* Turquoise hover color */
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600; /* Slightly bolder link text */
+            transition: color 0.3s ease;
+        }
 
-section {
-    padding: 60px 20px; /* Increased vertical padding */
-    max-width: 960px;
-    margin: 0 auto;
-}
+        nav ul li a:hover {
+            color: #80deea; /* Turquoise hover color */
+        }
 
-.hero {
-    background-color: #e0f7fa; /* Light cyan hero background */
-    color: #00838f; /* Darker teal for hero text */
-    text-align: center;
-    padding: 100px 20px;
-}
+        section {
+            padding: 60px 20px; /* Increased vertical padding */
+            max-width: 960px;
+            margin: 0 auto;
+        }
 
-.hero-image {
-    /* Background image or logo styling will go here */
-}
+        .hero {
+            background-color: #e0f7fa; /* Light cyan hero background */
+            color: #00838f; /* Darker teal for hero text */
+            text-align: center;
+            padding: 100px 20px;
+        }
 
-.hero-content h1 {
-    font-size: 2.8em;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
+        .hero-image {
+            /* Background image or logo styling will go here */
+        }
 
-.hero-content .subtext {
-    color: #777;
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
+        .hero-content h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-.button {
-    display: inline-block;
-    background-color: #80deea; /* Turquoise button */
-    color: #fff;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 8px; /* Slightly more rounded button */
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for subtle effect */
-}
+        .hero-content .subtext {
+            color: #777;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
 
-.button:hover {
-    background-color: #4db6ac; /* Darker turquoise on hover */
-    transform: scale(1.05); /* Subtle scale up on hover */
-}
+        .button {
+            display: inline-block;
+            background-color: #80deea; /* Turquoise button */
+            color: #fff;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px; /* Slightly more rounded button */
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for subtle effect */
+        }
 
-.about h2,
-.values h2,
-.products h2,
-.contact h2,
-.distributor h2 {
-    color: #00838f;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-}
+        .button:hover {
+            background-color: #4db6ac; /* Darker turquoise on hover */
+            transform: scale(1.05); /* Subtle scale up on hover */
+        }
 
-.values ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
+        .about h2,
+        .values h2,
+        .products h2,
+        .contact h2,
+        .distributor h2 {
+            color: #00838f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+        }
 
-.values ul li {
-    margin-bottom: 20px;
-    font-size: 1.15em;
-    color: #555;
-}
+        .about h3, .distributor h3 {
+            color: #00838f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
 
-.product-category {
-    margin-bottom: 60px;
-    text-align: center;
-}
+        .values ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
 
-.product-category h3 {
-    color: #00838f;
-    margin-bottom: 20px;
-    font-size: 1.6em;
-    font-weight: 600;
-}
+        .values ul li {
+            margin-bottom: 20px;
+            font-size: 1.15em;
+            color: #555;
+        }
 
-.product-slideshow {
-    margin-bottom: 30px;
-    /* Styling for the slideshow container will go here */
-    overflow: hidden; /* To contain the slideshow */
-    position: relative; /* For navigation positioning */
-}
+        .products .product-category {
+            margin-bottom: 60px;
+            text-align: center;
+        }
 
-.contact p,
-.distributor p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.1em;
-}
+        .products .product-category h3 {
+            color: #00838f;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
 
-.contact a,
-.distributor a {
-    color: #00838f;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
+        .products .product-category ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
 
-.contact a:hover,
-.distributor a:hover {
-    text-decoration: underline;
-    color: #4db6ac;
-}
+        .products .product-category ul li {
+            margin-bottom: 5px;
+            font-size: 1em;
+            color: #555;
+        }
 
-footer {
-    background-color: #f8f8f8;
-    padding: 40px 20px;
-    text-align: center;
-    color: #777;
-    font-size: 0.95em;
-    border-top: 1px solid #eee;
-}
+        /* Slideshow Styling */
+        .product-slideshow {
+            position: relative;
+            max-width: 400px; /* Adjust image width as needed */
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border-radius: 8px; /* Match button radius */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+        }
 
-footer p:last-child {
-    margin-top: 10px;
-    font-style: italic;
-}
+        .product-slideshow img {
+            width: 100%;
+            display: none; /* Hidden by default */
+            transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-/* Basic responsive adjustments */
-@media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
+        .product-slideshow img.active {
+            display: block; /* Show active image */
+            opacity: 1;
+        }
 
-    nav ul li {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-}
+        /* Slideshow Navigation */
+        .slideshow-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            position: relative;
+            z-index: 10; /* Ensure nav is above other elements */
+        }
+
+        .slideshow-btn {
+            background-color: rgba(0, 131, 143, 0.7); /* Darker teal with transparency */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0; /* Prevent shrinking */
+            margin: 0 10px; /* Space between buttons and dots */
+        }
+
+        .slideshow-btn:hover {
+            background-color: #00838f; /* Solid darker teal on hover */
+        }
+
+        .slideshow-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px; /* Space between dots */
+            flex-grow: 1; /* Allow dots to take available space */
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #80deea; /* Active dot color */
+        }
+
+        .contact p,
+        .distributor p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .contact a,
+        .distributor a {
+            color: #00838f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .contact a:hover,
+        .distributor a:hover {
+            text-decoration: underline;
+            color: #4db6ac;
+        }
+
+        /* Distributor Section Specifics */
+        .distributor .catalogue-image {
+            max-width: 600px; /* Limit catalogue image width */
+            margin: 30px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .distributor .catalogue-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.95em;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column; /* Stack items by default */
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* Space between elements */
+        }
+
+        .footer-logo img {
+            max-height: 50px; /* Adjust as needed */
+            width: auto;
+        }
+
+        .sticker-image img {
+            max-height: 70px; /* Adjust sticker size */
+            width: auto;
+            margin-top: 10px; /* Space above the sticker */
+        }
+
+        /* Optional: Fade-in animation for initial load */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content h1,
+        .hero-content .subtext,
+        .hero-content .button {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0; /* Start hidden for animation */
+        }
+        .hero-content h1 { animation-delay: 0.2s; }
+        .hero-content .subtext { animation-delay: 0.5s; }
+        .hero-content .button { animation-delay: 0.8s; }
+
+        /* Basic responsive adjustments */
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .footer-content {
+                flex-direction: row; /* Layout horizontally on larger screens */
+                justify-content: center;
+                gap: 30px; /* More space between items */
+            }
+        }
+
+        @media (max-width: 767px) {
+            header {
+                padding: 15px;
+            }
+            .logo img {
+                max-width: 150px;
+            }
+            nav ul {
+                flex-direction: column; /* Stack navigation items vertically on small screens */
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .hero {
+                padding: 80px 15px;
+            }
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content .subtext {
+                font-size: 1em;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            section {
+                padding: 40px 15px;
+            }
+            .product-slideshow {
+                max-width: 100%; /* Full width on small screens */
+            }
+        }
+        /* CSS ends here */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" alt="Herbst Beverages Main Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#values">Our Values</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#distributor">Become a Distributor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Refreshing Taste, Responsibly Bottled</h1>
+            <p class="subtext">Flavoured Sodas • Sabja Seed Drinks • Pure Water</p>
+            <a href="#products" class="button">Explore Our Products</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Herbst, we’re committed to delivering high-quality beverages made with care — from our refreshing sodas to our health-boosting sabja drinks. Headquartered in Srisailam, Andhra Pradesh, we’re proudly expanding to bring our taste to more communities.</p>
+        <section class="our-people">
+            <h3>Our People: Empowering Women in the Workplace</h3>
+            <p>At Herbst, we proudly employ a majority of women in our workforce. We believe in empowering women, fostering equality, and building a strong, diverse team. Together, we work to create beverages that are as refreshing as the values we stand for.</p>
+        </section>
+        <section class="our-packaging">
+            <h3>Our Packaging: Quality in Every Drop</h3>
+            <p>While we take pride in using glass bottles for our consumer-sized drinks to ensure freshness and sustainability, we also offer 5-litre and 10-litre cans exclusively for bottled water. These larger containers, made with high-quality plastic, are designed to preserve the purity and freshness of our water for bulk customers and businesses.</p>
+        </section>
+    </section>
+
+    <section id="values" class="values">
+        <h2>Our Values</h2>
+        <ul>
+            <li>Glass Bottles, No Plastic</li>
+            <li>FSSAI Certified Quality</li>
+            <li>Locally Produced</li>
+            <li>ISO CERTIFIED</li>
+            <li>Eco-Conscious Practices</li>
+        </ul>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-category">
+            <h3>GOLI Sodas</h3>
+            <div class="product-slideshow" id="goli-sodas-slideshow">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Soda%20gang.png" alt="Group of Herbst Goli Sodas">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20goli%20soda.png" alt="Herbst Blueberry Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Cola%20soda.png" alt="Herbst Cola Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Jeera%20goli%20soda.png" alt="Herbst Jeera Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20goli%20soda.png" alt="Herbst Orange Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20goli%20soda.png" alt="Herbst Strawberry Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Sugandhi%20goli%20soda.png" alt="Herbst Sugandhi Goli Soda">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Sweet%20lime%20goli%20%20soda.png" alt="Herbst Sweet Lime (Nimbu Pani) Goli Soda">
+            </div>
+            <p>Experience the unique taste of Herbst Goli Soda with a variety of refreshing flavours, perfect for every craving:</p>
+            <ul>
+                <li>Orange – A citrusy burst of refreshment.</li>
+                <li>Lemon – Classic tangy lemon goodness.</li>
+                <li>Nimbu Pani – The traditional, soothing Indian lemonade.</li>
+                <li>Jeera – A cooling, savoury twist with cumin.</li>
+                <li>Jaljeera – A spicy, tangy, and refreshing drink.</li>
+                <li>Strawberry – A sweet, fruity explosion of flavour.</li>
+                <li>Sugandhi – Fragrant and aromatic, a unique blend of herbs and spices.</li>
+            </ul>
+        </div>
+
+        <div class="product-category">
+            <h3>Sabja Seed Drinks</h3>
+            <div class="product-slideshow" id="sabja-drinks-slideshow">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Team%20sabja.jpeg" alt="Herbst Sabja Seed Drinks Variety">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20sabja%202.0.png" alt="Herbst Blueberry Sabja Seed Drink">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Guava%20sabja.png" alt="Herbst Guava Sabja Seed Drink">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Mango%20sabja%202.0.png" alt="Herbst Mango Sabja Seed Drink">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20sabja%202.0.png" alt="Herbst Orange Sabja Seed Drink">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20sabja%202.0.png" alt="Herbst Strawberry Sabja Seed Drink">
+            </div>
+            <p>Sabja seed drinks are a refreshing and healthful choice, packed with fiber, antioxidants, and essential minerals. They aid in digestion, regulate body temperature, and offer a natural energy boost, making them perfect for a healthy lifestyle.</p>
+        </div>
+
+        <div class="product-category">
+            <h3>Bottled Water (Nallamalla Hill Alkaline Water)</h3>
+            <div class="product-slideshow" id="water-slideshow">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/5%20can%20.png" alt="Herbst Nallamalla Hill Alkaline Water 5-liter can">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/750ml%20water.png" alt="Herbst Nallamalla Hill Alkaline Water 750ml bottle">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/12666451775167263843" alt="Nallamalla Hill Alkaline Water bottle">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/17101099101431756509" alt="Nallamalla Hill Alkaline Water bottle">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/17125286557886433551" alt="Nallamalla Hill Alkaline Water bottle 500ml">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/1386513295884038696" alt="Nallamalla Hill Alkaline Water bottle">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10572216969107144089" alt="Nallamalla Hill Alkaline Water bottle 1 liter">
+            </div>
+            <p>Pure, refreshing, and full of nature’s goodness — Nallamalla Hill Alkaline Water is sourced from the pristine Nallamalla Hills. It undergoes a multi-step purification process, including sand filtration, activated carbon filtration, UV treatment, reverse osmosis, and ozonation to ensure the highest quality and purity. Drink with confidence and experience hydration at its finest.</p>
+        </div>
+
+        <div class="product-category">
+            <h3>FLAVOURED MILK</h3>
+            <div class="product-slideshow" id="flavored-milk-slideshow">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/%20Badam%20flavoured%20milk.png" alt="Herbst Badam Flavoured Milk">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Chocolate%20flavoured%20milk.png" alt="Herbst Chocolate Flavoured Milk">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Pista%20flavoured%20milk.png" alt="Herbst Pista Flavoured Milk">
+            </div>
+            <p>The Creamy Way to Refresh Your Day.</p>
+            <ul>
+                <li>Badam – Rich and nutty, a classic favourite.</li>
+                <li>Chocolate – Decadently smooth and satisfying.</li>
+                <li>Pista – A delightful and aromatic treat.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: <a href="tel:9493905678">9493905678</a></p>
+        <p>Email: <a href="mailto:tandrapatitraders@gmail.com">tandrapatitraders@gmail.com</a></p>
+        <p><a href="https://wa.me/919493905678" target="_blank">Contact us on WhatsApp</a></p>
+    </section>
+
+    <section id="distributor" class="distributor">
+        <h2>Become a Distributor of Herbst Beverages</h2>
+        <p>Are you passionate about quality beverages and ready to expand your business? Herbst is looking for motivated individuals and businesses to join our growing network of distributors.</p>
+        <div class="catalogue-image">
+            <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Catalogue%20.jpeg" alt="Herbst Beverages Product Catalogue">
+        </div>
+        <h3>Why Partner with Herbst?</h3>
+        <ul>
+            <li>High-quality, unique products</li>
+            <li>Growing brand with a focus on sustainability and health</li>
+            <li>Competitive margins and support</li>
+            <li>Flexible distribution opportunities</li>
+        </ul>
+        <p>Interested? Contact us at:</p>
+        <p>📞 Phone: <a href="tel:9493905678">9493905678</a></p>
+        <p>📧 Email: <a href="mailto:tandrapatitraders@gmail.com">tandrapatitraders@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Herbst Beverages</p>
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%202.jpeg" alt="Herbst Beverages Brand Mark">
+            </div>
+            <div class="sticker-image">
+                <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Goli%20soda%20sticker.jpeg" alt="Herbst Goli Soda Sticker">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* JavaScript starts here */
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to initialize a single slideshow
+            function initializeSlideshow(slideshowId) {
+                const slideshowContainer = document.getElementById(slideshowId);
+                if (!slideshowContainer) return; // Exit if container not found
+
+                const slides = slideshowContainer.querySelectorAll('img');
+                if (slides.length === 0) return; // Exit if no images
+
+                let currentSlideIndex = 0;
+
+                // Create navigation buttons and dots
+                const navContainer = document.createElement('div');
+                navContainer.classList.add('slideshow-nav');
+
+                const prevButton = document.createElement('button');
+                prevButton.classList.add('slideshow-btn', 'prev-btn');
+                prevButton.innerHTML = '&#10094;'; // Left arrow
+                navContainer.appendChild(prevButton);
+
+                const dotsContainer = document.createElement('div');
+                dotsContainer.classList.add('slideshow-dots');
+                for (let i = 0; i < slides.length; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.dataset.slideIndex = i;
+                    dotsContainer.appendChild(dot);
+                }
+                navContainer.appendChild(dotsContainer);
+
+                const nextButton = document.createElement('button');
+                nextButton.classList.add('slideshow-btn', 'next-btn');
+                nextButton.innerHTML = '&#10095;'; // Right arrow
+                navContainer.appendChild(nextButton);
+
+                slideshowContainer.parentNode.insertBefore(navContainer, slideshowContainer.nextSibling);
+
+                // Function to show a specific slide
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = 'none'; // Hide all slides
+                        slide.classList.remove('active'); // Remove active class
+                    });
+                    const dots = dotsContainer.querySelectorAll('.dot');
+                    dots.forEach(dot => dot.classList.remove('active')); // Remove active from all dots
+
+                    slides[index].style.display = 'block'; // Show the current slide
+                    slides[index].classList.add('active'); // Add active class
+                    dots[index].classList.add('active'); // Activate current dot
+                    currentSlideIndex = index;
+                }
+
+                // Event listeners for navigation
+                prevButton.addEventListener('click', () => {
+                    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentSlideIndex);
+                });
+
+                nextButton.addEventListener('click', () => {
+                    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                    showSlide(currentSlideIndex);
+                });
+
+                dotsContainer.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('dot')) {
+                        const index = parseInt(event.target.dataset.slideIndex);
+                        showSlide(index);
+                    }
+                });
+
+                // Initialize with the first slide
+                showSlide(currentSlideIndex);
+            }
+
+            // Initialize all product slideshows
+            initializeSlideshow('goli-sodas-slideshow');
+            initializeSlideshow('sabja-drinks-slideshow');
+            initializeSlideshow('water-slideshow');
+            initializeSlideshow('flavored-milk-slideshow');
+
+            // --- Smooth Scroll for Navigation ---
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        /* JavaScript ends here */
+    </script>
+</body>
+</html>
