@@ -1,196 +1,185 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Herbst Beverages</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #fff9f0;
-      color: #333;
+body {
+    font-family: 'Open Sans', sans-serif; /* Clean, readable font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Very light gray background */
+    color: #333; /* Dark gray text */
+    -webkit-font-smoothing: antialiased; /* Improve font rendering */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    position: sticky; /* Keep header at the top on scroll */
+    top: 0;
+    z-index: 100; /* Ensure it stays above other content */
+}
+
+.logo img {
+    max-width: 180px; /* Adjusted logo size */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600; /* Slightly bolder link text */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #80deea; /* Turquoise hover color */
+}
+
+section {
+    padding: 60px 20px; /* Increased vertical padding */
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.hero {
+    background-color: #e0f7fa; /* Light cyan hero background */
+    color: #00838f; /* Darker teal for hero text */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-image {
+    /* Background image or logo styling will go here */
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content .subtext {
+    color: #777;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #80deea; /* Turquoise button */
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly more rounded button */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for subtle effect */
+}
+
+.button:hover {
+    background-color: #4db6ac; /* Darker turquoise on hover */
+    transform: scale(1.05); /* Subtle scale up on hover */
+}
+
+.about h2,
+.values h2,
+.products h2,
+.contact h2,
+.distributor h2 {
+    color: #00838f;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.values ul li {
+    margin-bottom: 20px;
+    font-size: 1.15em;
+    color: #555;
+}
+
+.product-category {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.product-category h3 {
+    color: #00838f;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.product-slideshow {
+    margin-bottom: 30px;
+    /* Styling for the slideshow container will go here */
+    overflow: hidden; /* To contain the slideshow */
+    position: relative; /* For navigation positioning */
+}
+
+.contact p,
+.distributor p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contact a,
+.distributor a {
+    color: #00838f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact a:hover,
+.distributor a:hover {
+    text-decoration: underline;
+    color: #4db6ac;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.95em;
+    border-top: 1px solid #eee;
+}
+
+footer p:last-child {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Basic responsive adjustments */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
-      background: #fffbf5;
-      border-bottom: 2px solid #ffc107;
+    nav ul li {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
     }
-
-    .logo-main {
-      max-height: 60px;
-    }
-
-    .logo-secondary {
-      max-height: 40px;
-    }
-
-    h2 {
-      color: #d32f2f;
-      padding: 15px;
-    }
-
-    .category-container {
-      padding: 20px;
-      margin: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-    }
-
-    .slide {
-      display: none;
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .slide.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .slide img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .nav-button {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.4);
-      color: white;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 50%;
-      font-size: 18px;
-    }
-
-    .prev { left: 10px; }
-    .next { right: 10px; }
-
-    .slideshow-wrapper {
-      position: relative;
-      overflow: hidden;
-      height: 400px;
-    }
-
-    .highlight-workforce {
-      background-color: #fdf2f8;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 40px 20px;
-      text-align: center;
-    }
-
-    .contact-us {
-      background: #e3f2fd;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 30px 20px;
-      text-align: center;
-    }
-
-    .contact-us a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #0288d1;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%201.jpeg" class="logo-main" />
-    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Logo%202.jpeg" class="logo-secondary" />
-  </header>
-
-  <!-- Goli Soda -->
-  <section class="category-container">
-    <h2>Goli Soda</h2>
-    <div class="slideshow-container" data-category="goli">
-      <div class="slideshow-wrapper">
-        <div class="slide active"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Blueberry%20soda.jpeg" /></div>
-        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Jeera%20soda.jpeg" /></div>
-        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Lemon%20sour.jpeg" /></div>
-        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Nimbu%20pani.jpeg" /></div>
-        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Orange%20soda.jpeg" /></div>
-        <div class="slide"><img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Strawberry%20soda.jpeg" /></div>
-      </div>
-      <button class="nav-button prev" onclick="changeSlide('goli', -1)">&#10094;</button>
-      <button class="nav-button next" onclick="changeSlide('goli', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- Contact Us -->
-  <section class="contact-us" id="contact">
-    <h2>Contact Us</h2>
-    <a href="https://wa.me/9493905678" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="tel:9493905678">Call Us</a>
-  </section>
-
-  <!-- Workforce Highlight -->
-  <section class="highlight-workforce">
-    <h2>Our Dedicated Team</h2>
-    <p>At Herbst Beverages, we are proud to have a dedicated and talented workforce, with a majority of our team comprised of skilled and hardworking women.</p>
-    <img src="https://raw.githubusercontent.com/mohammedsaif5678/Herbst/main/Side%20logo.jpeg" style="max-width: 150px; height: auto; margin-top: 10px;" />
-    <p>We believe in fostering an inclusive environment where everyone can thrive and contribute their best.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Herbst Beverages. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const slideData = {
-      goli: 0,
-    };
-
-    function showSlide(category, index) {
-      const container = document.querySelector(`.slideshow-container[data-category="${category}"]`);
-      const slides = container.querySelectorAll(".slide");
-      slideData[category] = (index + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === slideData[category]);
-      });
-    }
-
-    function changeSlide(category, step) {
-      showSlide(category, slideData[category] + step);
-    }
-
-    setInterval(() => {
-      changeSlide("goli", 1);
-    }, 3000);
-  </script>
-
-</body>
-</html>
+}
